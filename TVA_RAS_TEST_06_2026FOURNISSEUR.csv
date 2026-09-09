@@ -1,0 +1,5 @@
+numFacture;dateOperation;ifuFournisseur;nom;montantHT;tauxTva;Montant Tva;Mode paiement;Designation;datePaiement;ICE;Prorata;refNatOpt(4/5/6);tauxRetenuSource(100/75)
+F001;01/06/2026;1234567;FOURNISSEUR ALPHA;1000;20;200;CH;Achat biens equipement test;05/06/2026;1230000000;100;1;75
+F002;10/06/2026;7654321;FOURNISSEUR BETA;5000;20;1000;VI;Prestation service test;15/06/2026;1230000000;100;3;75
+F003;20/06/2026;4567890;FOURNISSEUR GAMMA;2500;10;300;EF;Achat travaux test;25/06/2026;12300000;50;;
+F004;25/06/2026;3204828;FOURNISSEUR SHIFT;6000;10;800;CH;Achat materiels;30/06/2026;129000000;50;;

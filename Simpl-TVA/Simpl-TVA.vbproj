@@ -74,7 +74,8 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Ionic.Zip">
-      <HintPath>..\..\..\..\..\Downloads\DotNetZipLib-DevKit-v1.9\zip-v1.9\Debug\Ionic.Zip.dll</HintPath>
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="MBGlassButton, Version=1.0.4377.15689, Culture=neutral, PublicKeyToken=c734814c4b88a51b, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -151,6 +152,12 @@
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModeConnexion.Designer.vb">
+      <DependentUpon>FrmModeConnexion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModeConnexion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GestionUtilisateurs\FrmUsersUp.designer.vb">
