@@ -8,7 +8,7 @@ Public Class FrmLogin
     Dim parameters() As SqlParameter
 
     Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
+
         'Dim dd As DateTime = DateTime.Now.ToShortDateString()
         'MsgBox("Date : " & DateTime.Now & " ; short " & dd.ToBinary() & " date : " & DateTime.Now.ToBinary())
         Open()
@@ -17,9 +17,9 @@ Public Class FrmLogin
         Dim CurrentdbSel As String = "SELECT ISNULL(collation_name, '-') FROM sys.databases WHERE name = '" + Currentdb + "' "
         CurrentdbSel = Read(CurrentdbSel).Rows(0)(0).ToString()
         If CurrentdbSel <> "French_CI_AS" Then
-            Dim ssqlAlter As String = "ALTER DATABASE [" + Currentdb + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;" & _
-                " ALTER DATABASE [" + Currentdb + "] SET SINGLE_USER;" & _
-                " ALTER DATABASE [" + Currentdb + "] COLLATE French_CI_AS;" & _
+            Dim ssqlAlter As String = "ALTER DATABASE [" + Currentdb + "] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;" &
+                " ALTER DATABASE [" + Currentdb + "] SET SINGLE_USER;" &
+                " ALTER DATABASE [" + Currentdb + "] COLLATE French_CI_AS;" &
                 " ALTER DATABASE [" + Currentdb + "] SET MULTI_USER;"
             Execute(ssqlAlter, Nothing)
         End If
@@ -61,14 +61,14 @@ Public Class FrmLogin
         {
             New SqlParameter("@P2", SqlDbType.VarChar, 255) With {.Value = MachineSysID}
         }
-        Dim LicenceData As DataTable = Read("SELECT " & _
-          "[systemeid] ," & _
-          "[societe] ," & _
-          "[logiciel] ," & _
-          "[date_exp] ," & _
-          "[opts] ," & _
-          "[nbr_soc] ," & _
-          "[previousRD] " & _
+        Dim LicenceData As DataTable = Read("SELECT " &
+          "[systemeid] ," &
+          "[societe] ," &
+          "[logiciel] ," &
+          "[date_exp] ," &
+          "[opts] ," &
+          "[nbr_soc] ," &
+          "[previousRD] " &
         "FROM [syslicenceinfo] WHERE [systemeid] = @P2 ", parameters)
 
         Select Case LicenceData.Rows.Count
@@ -116,9 +116,12 @@ Public Class FrmLogin
                                 acceuil_usersmaj = True
                                 linkedsocities = socitiesRights
                             End If
-                            Dim frmHome As SimplTVA = New SimplTVA()
-                            frmHome.Show()
-                            Me.Hide()
+                            Dim frmMode As New FrmModeConnexion()
+                            If frmMode.ShowDialog() = DialogResult.OK Then
+                                Dim frmHome As SimplTVA = New SimplTVA()
+                                frmHome.Show()
+                                Me.Hide()
+                            End If
                         Else
                             ERREUR.Visible = True
                         End If
