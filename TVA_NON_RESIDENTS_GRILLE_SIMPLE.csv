@@ -1,0 +1,6 @@
+nomPrenomOuRaisonSociale;Adresse Etranger;N° Identification Fiscale;Nature Opération;Date Paiement;Base Imposable HT;Taux;Tva Exigible;Montant Tva;Redevance
+FOURNISSEUR NON RESIDENT ALPHA;12 Baker Street, London, Royaume-Uni;NR-UK-001;Prestation de services;05/06/2026;1000;20;200;;0
+BETA CONSULTING SL;Calle Mayor 10, Madrid, Espagne;NR-ES-002;Achat de services numériques;15/06/2026;5000;20;1000;;0
+GAMMA TECH LLC;55 Market Street, Dubai, UAE;NR-AE-003;Assistance technique;25/06/2026;2500;10;250;;0
+LICENCE PROVIDER ALPHA;25 Rue de Geneve, Suisse;NR-CH-001;;08/06/2026;1500;20;300;300;1
+SOFTWARE OWNER BETA;1 Infinite Loop, USA;NR-US-002;;18/06/2026;4000;20;800;800;1

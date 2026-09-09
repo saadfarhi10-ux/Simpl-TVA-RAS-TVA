@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class SimplTVA
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class SimplTVA
     'REMARQUE : la procédure suivante est requise par le Concepteur Windows Form
     'Elle peut être modifiée à l'aide du Concepteur Windows Form.  
     'Ne la modifiez pas à l'aide de l'éditeur de code.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
@@ -28,6 +28,7 @@ Partial Class SimplTVA
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SimplTVA))
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.LabelModeConnexion = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -53,6 +54,8 @@ Partial Class SimplTVA
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.CmdConfirmer = New System.Windows.Forms.Button()
+        Me.ComboBoxTypeExport = New System.Windows.Forms.ComboBox()
+        Me.LabelTypeExport = New System.Windows.Forms.Label()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TextBoxRapprt = New System.Windows.Forms.TextBox()
         Me.HistoriqueToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -95,6 +98,17 @@ Partial Class SimplTVA
         Me.Label1.Size = New System.Drawing.Size(136, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "License accordée à : "
+        '
+        'LabelModeConnexion
+        '
+        Me.LabelModeConnexion.AutoSize = True
+        Me.LabelModeConnexion.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelModeConnexion.ForeColor = System.Drawing.Color.Indigo
+        Me.LabelModeConnexion.Location = New System.Drawing.Point(17, 42)
+        Me.LabelModeConnexion.Name = "LabelModeConnexion"
+        Me.LabelModeConnexion.Size = New System.Drawing.Size(100, 13)
+        Me.LabelModeConnexion.TabIndex = 66
+        Me.LabelModeConnexion.Text = "Mode : "
         '
         'Label2
         '
@@ -294,7 +308,7 @@ Partial Class SimplTVA
         Me.Grille.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Grille.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.Grille.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None
         Me.Grille.BackgroundColor = System.Drawing.Color.White
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(102, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -387,6 +401,8 @@ Partial Class SimplTVA
         Me.generation.Controls.Add(Me.Label6)
         Me.generation.Controls.Add(Me.Button6)
         Me.generation.Controls.Add(Me.CmdConfirmer)
+        Me.generation.Controls.Add(Me.ComboBoxTypeExport)
+        Me.generation.Controls.Add(Me.LabelTypeExport)
         Me.generation.Location = New System.Drawing.Point(4, 25)
         Me.generation.Name = "generation"
         Me.generation.Padding = New System.Windows.Forms.Padding(3)
@@ -468,15 +484,40 @@ Partial Class SimplTVA
         Me.CmdConfirmer.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight
         Me.CmdConfirmer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CmdConfirmer.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.CmdConfirmer.Image = Global.Simpl_TVA.My.Resources.Resources.Confirmer
-        Me.CmdConfirmer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.CmdConfirmer.Location = New System.Drawing.Point(434, 226)
         Me.CmdConfirmer.Name = "CmdConfirmer"
         Me.CmdConfirmer.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.CmdConfirmer.Size = New System.Drawing.Size(185, 31)
+        Me.CmdConfirmer.Size = New System.Drawing.Size(110, 30)
         Me.CmdConfirmer.TabIndex = 52
         Me.CmdConfirmer.Text = "Générer"
+        Me.CmdConfirmer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.CmdConfirmer.UseVisualStyleBackColor = False
+        '
+        'LabelTypeExport
+        '
+        Me.LabelTypeExport.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.LabelTypeExport.AutoSize = True
+        Me.LabelTypeExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelTypeExport.ForeColor = System.Drawing.Color.Black
+        Me.LabelTypeExport.Location = New System.Drawing.Point(147, 274)
+        Me.LabelTypeExport.Name = "LabelTypeExport"
+        Me.LabelTypeExport.Size = New System.Drawing.Size(150, 25)
+        Me.LabelTypeExport.TabIndex = 65
+        Me.LabelTypeExport.Text = "Type d'export :"
+        '
+        'ComboBoxTypeExport
+        '
+        Me.ComboBoxTypeExport.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ComboBoxTypeExport.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.ComboBoxTypeExport.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBoxTypeExport.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ComboBoxTypeExport.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxTypeExport.FormattingEnabled = True
+        Me.ComboBoxTypeExport.Items.AddRange(New Object() {"TVA", "TVA RAS"})
+        Me.ComboBoxTypeExport.Location = New System.Drawing.Point(324, 270)
+        Me.ComboBoxTypeExport.Name = "ComboBoxTypeExport"
+        Me.ComboBoxTypeExport.Size = New System.Drawing.Size(195, 32)
+        Me.ComboBoxTypeExport.TabIndex = 63
         '
         'TabPage1
         '
@@ -659,6 +700,7 @@ Partial Class SimplTVA
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LabelModeConnexion)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SimplTVA"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -682,6 +724,7 @@ Partial Class SimplTVA
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents LabelModeConnexion As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
@@ -721,6 +764,8 @@ Partial Class SimplTVA
     Friend WithEvents ToolStripStatusLabelExperitaion As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents LabelCountSums As System.Windows.Forms.Label
     Friend WithEvents CheckBoxZip As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBoxTypeExport As System.Windows.Forms.ComboBox
+    Friend WithEvents LabelTypeExport As System.Windows.Forms.Label
     Friend WithEvents MiseÀJourToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents LinkLabelXsl As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabelRecap As System.Windows.Forms.LinkLabel

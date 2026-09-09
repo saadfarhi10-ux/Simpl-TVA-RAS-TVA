@@ -7,6 +7,7 @@ Module GlobalModule
     Public acceuil_lecturedonnees, acceuil_traitement, acceuil_generation, acceuil_societesmaj, acceuil_usersmaj As Boolean
     Public curentUser As String
     Public gererLicence As Boolean = False
+    Public modeConnexion As String = ""
     'Private cnxString = ConfigurationManager.ConnectionStrings("BaseSimplTVAConnectionString").ToString()
 
     Public cnx As SqlConnection = New SqlConnection(GetConnectionStrings())
